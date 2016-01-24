@@ -12,7 +12,7 @@ def showList(data_lists):
         # plt.yticks(num_list)
         plt.grid(True)
         plt.hold()
-        plt.title("sort")
+        # plt.title("sort")
     plt.show()
 
 if __name__=="__main__":

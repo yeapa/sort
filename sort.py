@@ -1,5 +1,6 @@
 from show import showList
 import copy
+import numpy as np
 
 
 def exchange(aList, a, b):
@@ -18,7 +19,21 @@ def insertSort(aList):
     return aList
 
 
+def selectSort(aList):
+    display_temp = []
+    for i in xrange(0, len(aList)):
+        min = aList[i]
+        for j in xrange(i + 1, len(aList)):
+            if min > aList[j]:
+                min = aList[j]
+        aList[i] = min
+        display_temp.append(copy.copy(aList))
+    showList(display_temp)
+def shellSort(aList):
+
+    pass
+
 if __name__ == "__main__":
-    aList = [1, 5, 3, 2]
-    sortedList = insertSort(aList)
+    aList = np.random.randint(1, 50, 10)
+    sortedList = selectSort(aList)
     print sortedList
