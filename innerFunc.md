@@ -23,6 +23,6 @@ def decorater_func(func):
 
 
 @decorater_func
-def func():
-    print "func running"
+def func(a,b):
+    print "func running %s" % (a+b)
     ```
